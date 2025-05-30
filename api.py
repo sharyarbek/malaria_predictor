@@ -52,7 +52,7 @@ class NeuralNet(nn.Module):
 
 
 # Config
-MODEL_PATH = 'best_trained_net.pth'
+MODEL_PATH = 'best_trained_net_v3.pth'
 IMG_SIZE = 128
 CLASS_NAMES = ['Parasited', 'Uninfected']
 
@@ -74,7 +74,7 @@ net.eval()
 
 @app.get('/')
 def root_page():
-    return {'message' : 'Abnormality Detection in Medical Images Using CNN'}
+    return {'message' : ' Abnormality Detection in Medical Images Using CNN '}
 
 @app.post('/predictor')
 async def predictor(file: UploadFile = File(...)):
